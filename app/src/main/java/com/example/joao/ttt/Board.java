@@ -12,7 +12,6 @@ import android.widget.Toast;
 public class Board extends AppCompatActivity implements OnClickListener {
     private int p1;
     private int p2;
-    private Table table;
     private TextView t1;
     private TextView t2;
     private Button[] buttons;
@@ -28,7 +27,6 @@ public class Board extends AppCompatActivity implements OnClickListener {
         p2 = 0;
         t1 = (TextView) findViewById(R.id.score1);
         t2 = (TextView) findViewById(R.id.score2);
-        table = new Table();
         buttons = new Button[]{(Button) findViewById(R.id.button1),(Button) findViewById(R.id.button2),  (Button) findViewById(R.id.button3), (Button) findViewById(R.id.button4), (Button) findViewById(R.id.button5), (Button) findViewById(R.id.button6), (Button) findViewById(R.id.button7), (Button) findViewById(R.id.button8), (Button) findViewById(R.id.button9)};
         Button restart = (Button) findViewById(R.id.restart);
         restart.setOnClickListener(this);
@@ -44,7 +42,6 @@ public class Board extends AppCompatActivity implements OnClickListener {
             b.setBackgroundColor(Color.parseColor("#424242"));
             b.setClickable(true);
         }
-        table = new Table();
         turn = true;
         plays = 0;
     }
